@@ -59,7 +59,7 @@ export default function SelectChoice(props) {
             ))}
           </div>
         </div>
-        {props._items.map(({ text, _graphic, _options, _index, _isCorrect, _selected, _shouldBeSelected }, index) => (
+        {props._items.map(({ title, text, _graphic, _options, _index, _isCorrect, _selected, _shouldBeSelected }, index) => (
           <div
             className={classes([
               `selectchoice__item item-${index}`,
@@ -76,7 +76,12 @@ export default function SelectChoice(props) {
                 _isInteractionComplete && !_isCorrect && 'selectchoice__item-incorrect-icon'
               ])}
             >
-              <div className='icon'></div>
+              {shouldShowMarking && (
+                <div className='icon'></div>
+              )}
+            </div>
+            <div className='selectchoice__item-title'>
+              {title ? html(compile(title)) : null}
             </div>
             <div className='selectchoice__item-text'>
               {html(compile(text))}

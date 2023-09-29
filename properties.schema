@@ -108,6 +108,16 @@
         "type": "object",
         "required": true,
         "properties": {
+          "title": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Item title",
+            "inputType": "Text",
+            "validators": [],
+            "help": "This text will display as the item title",
+            "translatable": true
+          },
           "text": {
             "type": "string",
             "required": false,

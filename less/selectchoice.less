@@ -2,7 +2,7 @@
     &__widget {
       display: flex;
       flex-direction: column;
-    }  
+    }
     &__item-head  {
       display: none;
       font-weight: 700;
@@ -12,6 +12,11 @@
       margin-bottom: 0.25rem;
       background-color: #DDDDDD;
     }
+    &__item-title{
+      padding: .5rem .5rem .5rem 2rem;
+      display: block;
+      font-size: 2em;
+    }
     &__item-text{
       padding: .5rem .5rem .5rem 2rem;
     }
@@ -20,9 +25,9 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-around;
-      min-width: 6rem;   
+      min-width: 6rem;
     }
-   
+
     &__item-choice {
       position: relative;
       display: flex;
@@ -54,7 +59,7 @@
     &__item-correct-icon .icon {
       .icon-tick;
     }
-  
+
     &__item-incorrect-icon .icon {
       .icon-cross;
     }
@@ -75,4 +80,3 @@
       }
     }
   }
-  
